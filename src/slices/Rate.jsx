@@ -1,6 +1,6 @@
 import {createAsyncThunk,createSlice} from '@reduxjs/toolkit'
 
-const fetchRate=createAsyncThunk('transcations/fetchrate',async()=>{
+export const fetchRate=createAsyncThunk('transcations/fetchrate',async()=>{
     const response=await fetch(`https://api.frankfurter.dev/v1/latest?base=USD`)
     const data=await response.json();
     return data.rates;
@@ -23,7 +23,7 @@ const TranscationsSlice=createSlice({
         .addCase(fetchRate.pending,(state)=>{
             state.status='load'
         })
-        .addCase(fetchRate.fullfilled,(state,action)=>{
+        .addCase(fetchRate.fulfilled,(state,action)=>{
             state.status='success';
             state.rates=action.payload
         })
