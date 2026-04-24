@@ -152,7 +152,7 @@ const Home = () => {
 
         <div className="bg-slate-700 rounded-3xl border border-slate-900 overflow-x-auto p-4">
 
-          <table className="w-full min-w-[700px] table-auto text-sm text-slate-200">
+          <table className="w-full min-w-175 table-auto text-sm text-slate-200">
 
             {/* HEADER */}
             <thead>
