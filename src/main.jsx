@@ -6,11 +6,14 @@ import { store } from './store/store'
 import {Provider} from 'react-redux'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
+import { SnackbarProvider } from 'notistack';
 createRoot(document.getElementById('root')).render(
   <Provider store={store}>
     <BrowserRouter>
-      <App />
-      <ToastContainer/>
+      <SnackbarProvider anchorOrigin={{ vertical: 'top', horizontal: 'right' }} maxSnack={3}>
+        <App />
+        <ToastContainer/>
+      </SnackbarProvider>
     </BrowserRouter>
   </Provider>
   
