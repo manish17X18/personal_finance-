@@ -9,6 +9,7 @@ import Home from './components/Home'
 import Chart from './components/Chart'
 import SignUp from './components/SignUp'
 import Login from './components/Login'
+import SignUpHookForm from './components/SIgnUpHookForm'
 
 function App() {
   return (
